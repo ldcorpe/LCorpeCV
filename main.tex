@@ -1,0 +1,157 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\usepackage[utf8]{inputenc}
+% ...
+% In this area
+% The UTF-8 encoding is specified.
+% ...
+\inputencoding{latin1}
+% ...
+% Here the text encoding is specified as ISO Latin-1.
+% ...
+\inputencoding{utf8}
+\usepackage{hyperref}
+\hypersetup{colorlinks,urlcolor=blue}
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Louie D.}{Corpe}
+%\title{}                               % optional, remove / comment the line if not wanted
+\address{14 Sidney Terrace}{CM23 3TU}{Bishop's Stortford}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+447948343026}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{ldcorpe@msn.com}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2007-2011}{MSci Mathematics and Physics}{University College London}{London}{\textit{1:1}}{}  % arguments 3 to 6 can be left empty
+\cventry{2004-2007}{French Baccalaureate, Section Scientifique}{Lycée Condorcet}{Sydney, Australia}{\textit{}}{Mention Très Bien, Félicitations du Jury}
+
+\section{Masters Project}
+\cvitem{Title}{\emph{Helicity -- from Clifford to Graphene}}
+\cvitem{Supervisor}{Christian Gerhard Boehmer (UCL)}
+\cvitem{Description}{We investigated two seemingly disjoint definitions of helicity, one commonly used in particle physics, the other one used when studying Clifford algebras. We proved that one definition implied the other. As an unexpected application, we showed that the Hamiltonian describing the one-layer superconductor Graphene is proportional to the trace of an operator that is used in one of the definitions of helicity. \\ \textbf{Published in:} \emph{Journal of Physics A: Mathematical and Theoretical. 03/2012; 45(20).} \\\textbf{DOI:} 10.1088/1751-8113/45/20/205206 \quad \textbf{arxiv:} \href{http://arxiv.org/abs/1204.0135}{http://arxiv.org/abs/1204.0135}}
+
+\section{Experience}
+%\cventry{Ph.D. Student - CMS Experiment, H\rightarrow\gamma\gamma}{Oct 2013 - Ongoing (expected March 2017)}{Imperial College London}{Supervisor: Prof. Paul Dauncey}{}{ The Compact Muon Solenoid (CMS) is one of the four experiments situated on the Large Hadron Collider at CERN. My Ph.D. involves the preparation and analysis of LHC run 2 data, specifically trying to make a new observation of the Higgs boson decaying into two photons (H\rightarrow\gamma\gamma).\newline{}%
+\cventry{Supervisor: Prof. Paul Dauncey}{Oct 2013 - ongoing (expected Mar 2017)}{Ph.D. Student - CMS Experiment, $H\rightarrow\gamma\gamma$ analysis}{Imperial College London}{London and Geneva}{\vspace{0.4cm} The Compact Muon Solenoid (CMS) is one of the four experiments situated on the Large Hadron Collider at CERN. My Ph.D. involves the preparation and analysis of LHC run 2 data, specifically, making a new observation of the Higgs boson decaying into two photons ($H\rightarrow\gamma\gamma$), and measuring its properties (see Publications [2],[3]). One year of the Ph.D. was spent on attachment onsite at CERN in Switzerland.\\ \newline{}%
+\textbf{Responsibilities include:}
+\begin{itemize}%
+%\item  Calibration of CMS Electromagnetic Calorimeter (ECAL) sub-detector as part of a wider team.
+\item  Design and implementation of new \textbf{analysis software} for various stages of the workflow.
+\item  \textbf{Statistical analysis} of newly-acquired data and preparation of final results.
+\item  Helping to design \textbf{new analysis strategies} for a proposed upgrade to the CMS detector.
+\end{itemize}
+\vspace{0.4cm}
+\textbf{Skills developed}:%
+\begin{itemize}%i
+\item  Data analysis:
+\begin{itemize}
+\item  Determining new \textbf{variables and patterns} to distinguish signal from background in \textbf{very large datasets}.
+\item  Categorising data for optimal sensitivity using \textbf{multivariate analysis techniques (machine learning)}.
+%\item  Extracting information from large datasets and sumarising research progress succinctly.
+\item  \textbf{Automation, optimisation and streamlining} of workflows to increase productivity. 
+\end{itemize}
+\item  Proficiency in a variety of coding and typesetting languages (\texttt{C++, python, bash}, \LaTeX) and research level analysis and fitting tools (\texttt{Roofit, Root}).
+%\item  Problem solving and research skills. 
+\item  Presentation skills: sumarizing complicated concepts and research for audiences of different ability. 
+\end{itemize}}
+
+\section{Experience (Continued)}
+%\subsection{Vocational}
+\cventry{(Formerly Efficient Frontier)}{Oct 2011 - June 2013}{Associate Account Manager}{Adobe Systems Europe}{London}{\vspace{0.5cm}Efficient Frontier was a startup selling automated advertising technology for pay-per-click adverts on search engines. I worked as part of a team managing large online advertising campaigns for a range of clients of different sizes. Efficient Frontier was acquired by Adobe in early 2012.\\\newline{} 
+\textbf{Responsibilities included:}%
+\begin{itemize}%
+\item  Management of search engine campaigns for enterprise-level clients using algorithmic bidding technology.
+\item  Analysis of large datasets for the purpose of forecasting, planning and strategy.
+\item  Management of client relationships.
+\item  Design and development of Excel-based tools and macros to increase efficiency of wider team.
+\end{itemize}
+\vspace{0.5cm}
+\textbf{Skills developed:}%
+\begin{itemize}%i
+\item  Data analysis skills, including high Excel competency (macros, VBA, pivot tables).
+\item  Teamwork, client management skills and presentation skills.
+\end{itemize}}
+
+\section{Languages}
+\cvitemwithcomment{French}{Fluent}{Raised in France, educated in French}
+\cvitemwithcomment{German}{Conversational}{Studied for 6 years during education.}
+
+\section{Computing skills}
+\cvdoubleitem{Programming}{\texttt{C++, Python, bash }}{Typesetting}{\LaTeX}
+\cvdoubleitem{Data Analysis}{\texttt{Root, RooFit}}{Machine Learning}{\texttt{TMVA}}
+
+\section{Interests}
+\cvitem{Co-founder of \href{http://www.everything-theatre.co.uk}{everything-theatre.co.uk}}{At first a pokey theatre review blog started with a friend, Everything Theatre now boasts a $30+$ team of volunteer reviewers, editors, feature writers and schedulers. We cover London shows from fringe to West-end, drama to stand-up comedy.}
+\cvitem{Running and Cycling}{Rome Marathon 2013, Brighton Half Marathon 2012, 2014, 2015, 2016. Cycled $1000+$ km from London to Berlin in 2011.}
+
+\section{Publications}
+\cvitem{[1]}{Christian G. Boehmer, Louie Corpe, “Helicity -- from Clifford to Graphene”, J. Phys. A: Math. Theor. 45205206, 2012.}
+\cvitem{[2]}{CMS Collaboration, “First results on Higgs to $\gamma\gamma$  at 13 TeV”, CMS-PAS-HIG-15-005, CERN, Geneva, 2016.}
+\cvitem{[3]}{CMS Collaboration, “Updated measurements of Higgs boson production in the diphoton decay channel at $\sqrt{s}$ = 13 TeV in pp collisions at CMS”, CMS-PAS-HIG-16-020, CERN, Geneva, 2016.}
+
+\section{References}
+\begin{cvcolumns}
+  Available upon request
+  %\cvcolumn{Academic}{\begin{itemize}\item Paul Dauncey (Imperial)\item Christian Boehmer (UCL)\end{itemize}}
+\end{cvcolumns}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+\end{document}

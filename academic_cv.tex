@@ -1,0 +1,218 @@
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+% moderncv themes
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\usepackage[utf8]{inputenc}
+\inputencoding{latin1}
+\inputencoding{utf8}
+\usepackage{hyperref}
+\hypersetup{colorlinks,urlcolor=blue}
+\usepackage[utf8]{inputenc}                    \usepackage[scale=0.75]{geometry}
+
+% personal data
+\name{Louie D.}{Corpe}
+\title{Graduate Student in Particle Physics}
+\address{14 Sidney Terrace}{CM23 3TU}{Bishops Stortford}
+\phone[mobile]{+447948343026}                  
+\email{ldcorpe@msn.com}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         
+%\extrainfo{additional information}                 
+%\photo[64pt][0.42pt]{picture}                       
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+\newcommand\myitem{ \vspace{0.15cm} \item \normalsize }
+\newcommand\mybibforeword{}
+\newcommand\mysection[1]{\section{#1}}
+
+\renewcommand*{\cventry}[7][.25em]{%
+ \vspace{0.15cm}
+  \cvitem[#1]{#2}{%
+    {\bfseries#3}%
+    \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}% I changed this line (with comma) ...
+      %\ifthenelse{\equal{#4}{}}{}{ {\slshape#4}}% ... into this one (without comma).
+      %\ifthenelse{\equal{#5}{}}{}{, #5}%
+      %\strut%
+      \ifx&#5&%
+      \else{\newline{}\begin{minipage}[t]{\linewidth}\normalsize#5\end{minipage}}\fi
+      \ifthenelse{\equal{#6}{}}{}{\vspace{0.15cm} #6}%
+      \strut%
+      \ifx&#7&%
+      \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+
+\renewcommand*{\cvdoubleitem}[5][.25em]{%
+ \cvitem[#1]{#2}{%
+   \begin{minipage}[t]{\doubleitemmaincolumnwidth}#3\end{minipage}%
+   \hfill% fill of \separatorcolumnwidth
+   \begin{minipage}[t]{1.5\hintscolumnwidth}\raggedleft\hintstyle{#4}\end{minipage}%
+   \hspace*{\separatorcolumnwidth}%
+   \begin{minipage}[t]{\doubleitemmaincolumnwidth}#5\end{minipage}}}
+
+\renewenvironment{thebibliography}[1]%
+  {    
+  \bibliographyhead{\refname}%
+%    \small%
+\mybibforeword
+    \begin{list}{\bibliographyitemlabel}%
+      {%
+        \setlength{\topsep}{0pt}%
+        \setlength{\labelwidth}{\hintscolumnwidth}%
+        \setlength{\labelsep}{\separatorcolumnwidth}%
+        \leftmargin\labelwidth%
+        \advance\leftmargin\labelsep%
+        \@openbib@code%
+        \usecounter{enumiv}%
+        \let\p@enumiv\@empty%
+        \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+        \sloppy\clubpenalty4000\widowpenalty4000%
+%        \sfcode`\.\@m%
+%        \sfcode `\=1000\relax%
+  }%
+  {%
+    \def\@noitemerr{\@latex@warning{Empty `thebibliography' environment}}%
+    \end{list}%
+  }
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\section{Experience}
+\cventry{2013--present}{Imperial College (IC), CMS collaboration}{PhD Student}{London, CERN (Geneva)}{  % arguments 3 to 6 can be left empty
+My PhD involved the study of the Higgs boson decaying into two photons ($H\rightarrow\gamma\gamma$) in data collected at the CMS experiment during proton-proton collisions in the second run of the Large Hadron Collider (LHC). One year of the PhD was spent on attachment at CERN in Switzerland. I am due to submit my thesis in April 2017.\vspace{-0.3cm}}{
+\begin{itemize}%
+%\setlength\itemsep{0.42em}
+\myitem I was one of the main analysts preparing the CMS $H\rightarrow\gamma\gamma$ results using data collected during the second run of the LHC~\cite{PAS-HIG-15-005,PAS-HIG-16-020}. We produced a new observation of the Higgs boson, with over 5$\sigma$ significance. My responsibilities included:
+\begin{itemize}
+%\setlength\itemsep{0.25em}
+\item modelling the signal and background in the main analysis.
+\item performing the unblinding and statistical interpretation of the data.
+\item co-editing the public physics analysis summary for our ICHEP 2016 result~\cite{PAS-HIG-16-020}.
+\end{itemize}
+%
+%
+\myitem I helped build and maintain a new software framework for use in diphoton decay analyses (\texttt{FLASHgg} and \texttt{FLASHggFinalFits}). My responsibilities included:
+\begin{itemize}
+%\item performing initial studies into jet reconstruction using the PUPPI algorithm. 
+\item propagating systematic uncertainties into final result.
+\item developing and maintaining the signal and background modelling tools.
+\end{itemize}
+%
+%
+\myitem I determined the photon identification efficiency of the proposed High Granularity Calorimeter (HGC) project for the CMS upgrade at the time of the High-Luminosity LHC (HL-LHC). The HGC was selected as the official upgrade choice, and my work was included in the technical proposal~\cite{CMSPhaseII}.
+%
+%
+\myitem I was part of the 2015 CMS Electromagnetic Calorimeter (ECAL) calibration team. I was responsible for validating calibrations and monitoring of the stability of the measured Z-boson mass, with the first data of the second LHC run.
+%
+%
+\myitem I assessed the photon energy resolution in the CMS ECAL during the first run of the LHC, using simulated $H\rightarrow\gamma\gamma$ photons. My work was included in the reference paper for CMS photon reconstruction performance in the first run~\cite{PhotonPerformance}.
+%
+%
+\myitem I was responsible for projecting the 2016 $H\rightarrow\gamma\gamma$ results to the conditions of the HL-LHC for the ECFA 2016 workshop~\cite{CMS-DP-2016-064}. This extrapolation was used to inform discussion on future physics strategy.
+%
+%
+\myitem I represented the $H\rightarrow\gamma\gamma$ analysis team in the CMS Higgs Combinations Group. I was responsible for validating the inputs to the CMS statistical interpretation tools for all analyses involving Higgs decays to photons.
+%
+%
+\myitem I performed data-taking shifts at CMS in the role of Detector Control System shifter, monitoring the status of sub-detectors and checking for safety issues.
+\end{itemize}
+}
+%
+%
+%
+\cventry{2011--2013}{Adobe Systems (Formerly Efficient Frontier)}{Associate Account Manager}{London}{
+Efficient Frontier was a startup selling automated advertising technology for pay-per-click adverts on search engines. I worked as part of a team managing large online advertising campaigns for a range of clients of different sizes. Efficient Frontier was acquired by Adobe in early 2012 as part of their media optimization offering.
+}{}
+%
+%
+%
+\cventry{2010--2011}{University College London (UCL)}{MSci Project}{London}{  % arguments 3 to 6 can be left empty
+My MSci project, \emph{Helicity -- from Clifford to Graphene}, was supervised by Christian Gerhard Boehmer (UCL). We determined the mathematical link between disjoint definitions of helicity (as a Clifford algebra in mathematics, and as a bilinear covariant in theoretical physics). We found an unexpected application relevant to the propagation of electrons in superconducting graphene.
+Our findings were published in Journal of Physics A: Mathematical and Theoretical.~\cite{MastersProject}
+}{}
+%
+%
+%
+\section{Education}
+\cventry{2007--2011}{MSci Mathematics and Physics}{University College London}{First Class Honours}{}{}  % arguments 3 to 6 can be left empty
+\cventry{2003--2007}{French Baccalaureate, Section Scientifique}{Lycée Condorcet, Sydney, Australia}{Mention Très Bien, Félicitations du Jury}{}{}
+%
+%
+%
+\section{Teaching Experience}
+\cventry{2016}{Undergraduate Summer Projects}{Imperial College}{Project supervisor for four students}{}{}
+\cventry{2016}{Undergraduate Advanced Particle Physics}{Imperial College}{Coursework marker and demonstrator for 4th year students}{}{}
+\cventry{2015, 2016}{Undergraduates Labs}{Imperial College}{1st Year Lab demonstrator: electromagnetism and optics}{}{}
+\cventry{2015, 2016}{CEA@Islington Project}{UCL and Ambler Primary School}{Mathematics teaching assistant}{}{}
+%
+%
+%
+\section{Outreach Experience}
+\cventry{2016}{Particle Physics Masterclass}{Imperial College}{Demonstrator for secondary school students}{}{}
+\cventry{2015}{Royal Society Summer Exhibition}{Royal Society, London}{Exhibit designer and shifter}{}{}
+\cventry{2011}{Mathematics Department Podcast}{UCL}{Podcast co-writer, researcher and co-host}{}{}%
+%
+%
+%
+\section{Talks}
+\cventry{2016}{Higgs Couplings 2016}{SLAC, California, USA}{Higgs to gamma gamma decays: inclusive and differential results}{}{}
+\cventry{2016}{Higgs Hunting 2016 (Young Scientists Forum)}{UPMC, Paris, France}{Search for the Standard Model Higgs Boson decaying to two photons in Run II LHC collisions at CMS}{}{}
+\cventry{2016}{HIG-16-020 Approval}{CERN, Geneva, Switzerland}{Updated measurements of Higgs boson production in the diphoton decay channel at centre-of-mass energy 13~TeV}{}{}
+\cventry{2016}{IOP HEP \& APP joint conference}{University of Sussex, Brighton, UK}{Searching for the Higgs Boson decaying to photons in Run II LHC collisions at CMS}{}{}
+\cventry{2015}{ECAL days}{University of Trieste, Trieste, Italy}{Clustering and Pileup mitigation}{}{}
+%
+%
+%
+\section{Computing skills}
+\cvdoubleitem{Typesetting}{\LaTeX}{Coding Languages}{\texttt{C$++$, Python, bash }}{}
+\cvdoubleitem{Data Analysis}{\texttt{Root, RooFit}}{Machine Learning }{\texttt{TMVA}}{}
+%
+%
+%
+\vspace{0.42cm}
+\section{Languages}
+\cventry{French}{Fluent}{Raised in France, educated in French}{}{}{}
+\cventry{German}{Conversational}{Studied for 6 years during education.}{}{}{}
+
+\vspace{0.42cm}
+\section{Academic Awards}
+\cventry{2011}{UCL Castillejo Prize For Mathematics and Physics} {}{Winner}{}{}
+\cventry{2007}{French Baccalaureate}{}{Congratulations from the examination board \emph{(Félicitations du Jury)}}{}{}
+\cventry{2006}{Australian Science Olympiads National Qualifying Exam}{}{High Distinction}{}{}
+
+\vspace{0.42cm}
+\section{Memberships and Collaborations}
+\cventry{2016--present}{Institute of Physics}{Associate Member}{}{}{}
+\cventry{2014--present}{CMS Collaboration}{Member}{}{}{}
+
+
+\vspace{0.42cm}
+% Publications from a BibTeX file without multibib
+%  for numerical labels: 
+\renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): 
+  \renewcommand{\refname}{Publications}{}
+\renewcommand{\mybibforeword}{ I am a co-author on 152 citeable papers as part of the CMS collaboration (inSPIRE HEP, November 2016), with a h$_\textrm{HEP}$ index of 28. Papers to which I have made a substantial contribution are listed below. \vspace{0.3cm}}
+  \nocite{*}
+  \bibliographystyle{lucas_unsrt}
+  \bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+  \section{References}
+\cventry{(Supervisor)}{Professor Paul Dauncey}{Professor of Particle Physics (Imperial College)}{p.dauncey@imperial.ac.uk}{}{}
+\cventry{}{Professor Sir Tejinder Virdee FRS}{Professor of Physics (Imperial College)}{tejinder.virdee@cern.ch}{}{}
+\cventry{}{Doctor Andr\'e Tinoco Mendes David}{Research Physicist (CERN)}{andre.david@cern.ch}{}{}
+
+  \clearpage
+  \end{document}
